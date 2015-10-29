@@ -1,0 +1,28 @@
+
+//Variables que se actualizan cada cierto tiempo
+Temperatura= ChequearTemperatura(); // Método que retorna valor double //POR AHORA SÓLO USAR ESTA VARIABLE Y MÉTODO DE CHEQUEO
+Humedad_aire= ChequearHumedadAire(); //Método que retorna valor valor double
+HumedadSuelo= ChequearHumedadSuelo(); //Método que retorna valor valor double 
+Luz= ChequearLuz(); //Método que retorna valor valor boolean
+Tiempo= IntervaloDeseado() //método que recurra al reloj de la placa para saber cada cuanto tiempo chequear todo
+
+//Variables fijas o pedidas al usuario antes de empezar
+TemperaturaIdeal= xxxxxx;   //POR AHORA SÓLO USAR ESTA VARIABLE
+HumedadAireIdeal= xxxxxxx;
+HumedadSueloIdeal= xxxxxx;
+LuzIdeal= xxxxx;
+
+//Main
+
+//El siguiente fragmento de código debería ser un método que se pueda llamar desde el main 
+if (Temperatura>TemperaturaIdeal){
+   Print("Temperatura muy alta, favor de enfriar.  Valor:" + Temperatura + "grados");
+}                             
+else{
+if(Temperatura<TemperaturaIdeal){
+   Print("Temperatura muy baja, favor de calentar.  Valor:" + Temperatura + "grados");
+}
+}
+else{
+   Print ("Temperatura perfecta.  Valor:" + Temperatura + "grados");  
+}
