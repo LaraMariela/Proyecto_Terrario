@@ -1,0 +1,19 @@
+Temperatura= 7  ##Este valor debe ser dado por el sensor de la placa
+TempMinima= float(input("Escribí la temperatura mínima permitida dentro del terrario"))
+TempMaxima= float(input("Escribí la temperatura máxima permitida dentro del terrario"))
+print ("Valores para testear:      Valor menor: " , TempMinima , " y Valor mayor: " , TempMaxima)
+
+print ("-----")  ## Solo es un separador, no es una línea de código importante
+
+
+  ## Lo siguiente debe estar contenido dentro de una función que pueda ser llamada en cada chequeo:
+if(Temperatura<TempMinima):
+         print (Temperatura , "grados es demasiado frío!! Por favor calentá el ambiente!")
+
+elif ( Temperatura>TempMaxima):
+
+        print (Temperatura , "grados es demasiado calor!! Por favor enfriá el ambiente!")
+
+else:
+        print ("la temperatura es perfecta!   ~~ hace" , Temperatura , "grados ~~")
+
