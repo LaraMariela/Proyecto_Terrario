@@ -68,16 +68,16 @@ import time  ##PARA IMPOTAR LA FUNCION QUE DA PAUSA CADA X INTERVALO DE SEGUNDOS
 Teclas= input ("Digite 1 para empezar y 2 para finalizar")
 Activado= PonerTodoEnMarcha(Teclas)
 
+MostrarValores(Temperatura, TemperaturaMin, TemperaturaMax)
+
+
 
 while(Activado==True): ##CICLO QUE DA VIDA A LA EJECUCION DEL PROGRAMA
-
 
  Temperatura= ObtenerTemperatura()  ##Este valor debe ser dado por el sensor de la placa
  TemperaturaMin= TemperaturaMinima(10)
  TemperaturaMax= TemperaturaMaxima(35)
- MostrarValores(Temperatura, TemperaturaMin, TemperaturaMax)
  ChequearTemperatura(Temperatura, TemperaturaMin, TemperaturaMax)
-
  time.sleep(5) ##PAUSA DE 5 SEGUNDOS
 
 
