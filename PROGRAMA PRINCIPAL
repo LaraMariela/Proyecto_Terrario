@@ -60,25 +60,29 @@ def MostrarValores(E, F, G): ##FUNCION QUE MUESTRA EN PANTALLA LAS TEMPERATURAS 
 def main():  ##DEFINICION DE MAIN ("MAIN" ES LA FUNCION QUE PERMITE FUNCIONAR AL PROGRAMA PRINCIPAL)
     pass
 
-if __name__ == '__main__':  ##USO DEL MAIN
+if __name__ == '__main__':  ##MAIN QUE "DA VIDA" AL PROGRAMA
     main()
 
 import time  ##PARA IMPOTAR LA FUNCION QUE DA PAUSA CADA X INTERVALO DE SEGUNDOS
+from datetime import date  ##PARA IMPORTAR LA FUNCION QUE DA LA FECHA ACTUAL
+
 
 Teclas= input ("Digite 1 para empezar y 2 para finalizar")
 Activado= PonerTodoEnMarcha(Teclas)
 
+Fecha=  date.today() ##VARIABLE QUE CONTIENE LA FECHA ACTUAL DEL ORDENADOR
 MostrarValores(Temperatura, TemperaturaMin, TemperaturaMax)
-print ("Hora de inicio: ", print (time.strftime("%H:%M:%S")) ##MUESTRA EN PANTALLA LA HORA DE EJECUCIÓN
 
 
+
+print (Fecha) ##MUESTRA EN PANTALLA LA FECHA ANTES DE EJECUTAR EL CICLO WHILE
 
 while(Activado==True): ##CICLO QUE DA VIDA A LA EJECUCION DEL PROGRAMA
-
+ print ("Hora: ", print ((time.strftime("%H:%M:%S"))) ##MUESTRA EN PANTALLA LA HORA DEL ORDENADOR
  Temperatura= ObtenerTemperatura()  ##Este valor debe ser dado por el sensor de la placa
  TemperaturaMin= TemperaturaMinima(10)
  TemperaturaMax= TemperaturaMaxima(35)
  ChequearTemperatura(Temperatura, TemperaturaMin, TemperaturaMax)
  time.sleep(5) ##PAUSA DE 5 SEGUNDOS
-
+ print("-----------")
 
