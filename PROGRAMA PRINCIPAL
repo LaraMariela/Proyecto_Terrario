@@ -69,6 +69,7 @@ Teclas= input ("Digite 1 para empezar y 2 para finalizar")
 Activado= PonerTodoEnMarcha(Teclas)
 
 MostrarValores(Temperatura, TemperaturaMin, TemperaturaMax)
+print ("Hora de inicio: ", print (time.strftime("%H:%M:%S")) ##MUESTRA EN PANTALLA LA HORA DE EJECUCIÓN
 
 
 
