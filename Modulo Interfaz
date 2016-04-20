@@ -1,0 +1,47 @@
+from tkinter import *
+import Ciclo
+from Ciclo import *
+import Metodos
+from Metodos import *
+
+
+#Window
+window = Tk()
+window.config(bg="light yellow")
+window.geometry("800x600")
+window.resizable(width=FALSE, height=FALSE)
+window.title('TERRARIO')
+
+
+a = StringVar()
+
+
+
+#Label
+label0=Label(window, text='Bienvenido', fg = 'Black', font=('bold', 18))
+label0.grid(row=1,column=5)
+
+
+#Buttons
+boton1 = Button(window,text="Iniciar Chequeo",bg='green')  ## poner otro parametro " command="
+boton1.grid(row=9,column=5)
+boton2 = Button(window,text="Terminar Chequeo",bg='red')
+boton2.grid(row=9,column=6)
+
+
+
+
+#usuario
+label1=Label(window,text="Tempreratura Minima: ")
+label1.grid(row=3,column=6)
+Input1 = Entry(window, width=30)
+Input1.grid(row=3, column=7)
+
+
+label2=Label(window,text="Tempreratura Maxima: ")
+label2.grid(row=4,column=6)
+Input2 = Entry(window, width=30)
+Input2.grid(row=4, column=7)
+
+#End window
+window.mainloop()
