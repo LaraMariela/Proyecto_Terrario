@@ -1,6 +1,8 @@
-import Simulator
+import random
 
-Temperature= Simulator.Get_Temperature()
+Tank_Size= 1200
+Internal_Temperature= Internal_Temperature= random.randrange(0,50)
+
 
 def Get_Temperature():
-    return Temperature
+    return Internal_Temperature
