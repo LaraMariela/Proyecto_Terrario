@@ -1,0 +1,58 @@
+import tkinter
+from tkinter import *
+import Comparator
+
+State = False  # Global flag
+
+def Run():
+    if State:  # Only do this if the Stop button has not been clicked
+        CuadroDeTexto.config(text = Comparator.CheckTemperatures() )
+        print ("iteracion") ########## TEST DE ITERACIONES DE RUN
+    else:
+        CuadroDeTexto.config(text = "Haga click en ACTIVAR para comenzar el chequeo")
+        print ("texto del label borrado") ########## TEST DE ITERACIONES
+
+    Window.after(1000, Run)   # After 1 second, call Run again (create a recursive loop)
+
+def Start():
+    #Enable run by setting the global flag to True.
+    global State
+    State = True
+
+def Stop():
+    #Stop run by setting the global flag to False.
+    global State
+    State = False
+
+def Centre_Window(a):
+    Window.update_idletasks()
+    w=Window.winfo_width()
+    h=Window.winfo_height()
+    extraW=Window.winfo_screenwidth()-w
+    extraH=Window.winfo_screenheight()-h
+    Window.geometry("%dx%d%+d%+d" % (w,h,extraW/2,extraH/2))
+
+Window = Tk()
+Window.geometry("500x300+100+100")
+Window.title('TERRARIO')
+Window.config(bg="light yellow")
+Centre_Window(Window)
+
+app = Frame(Window)
+app.grid()
+
+
+OnButton = Button(app,text="Activar", command=Start, font=(14), width=10, bg='green')
+OffButton=Button(app,text="Desactivar",command=Stop,font=(14),width=10,bg='red')
+
+OnButton.grid()
+OffButton.grid()
+
+CuadroDeTexto = Label(Window, text="  ")
+CuadroDeTexto.grid(row=0,column=1)
+
+
+
+Window.after(1000, Run)  # After 1 second, call Run
+Window.mainloop()
+
