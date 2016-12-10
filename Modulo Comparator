@@ -1,0 +1,20 @@
+import Temperatures
+import Menssages
+
+
+
+def CheckTemperatures():
+
+  A= Temperatures.Get_ActualTemperature()
+  B= Temperatures.Get_Minimum()
+  C= Temperatures.Get_Maximum()
+  Text= ""
+
+  if( A < B ):
+        Text= Menssages.ColdAlert()
+  elif( A > C ):
+        Text= Menssages.WarmAlert()
+  else:
+        Text= Menssages.AdecuateAlert()
+
+  return (Text)
