@@ -1,0 +1,24 @@
+import Temperatures
+
+def ColdAlert():
+    Value= str(Temperatures.Get_ActualTemperature())
+    return ("Muy frio, temperatura interna: ", Value, "grados")
+
+def WarmAlert():
+    Value= str(Temperatures.Get_ActualTemperature())
+    return ("Muy caliente, temperature interna: ", Value, " grados")
+
+def AdecuateAlert():
+    Value= str(Temperatures.Get_ActualTemperature())
+    return ("Temperatura Perfecta: ", Value, " grados")
+
+
+def ShowActualTemperature():
+    Value= str(Temperatures.Get_ActualTemperature())
+
+    return(  "Temperatura actual: ", Value, " grados"  )
+
+def ShowRange ():
+    Value1= str(Temperatures.Get_Minimum())
+    Value2= str(Temperatures.Get_Maximum())
+    return (  "Minimo tolerado: ", Value1, " grados", "   Maximo tolerado:", Value2, "grados"  )
