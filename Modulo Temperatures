@@ -1,0 +1,16 @@
+import Sensor
+
+
+MinTemp= 15
+MaxTemp= 35
+ActualTemp= Sensor.Get_Temperature()
+
+
+def Get_Minimum():
+    return MinTemp
+
+def Get_Maximum():
+    return MaxTemp
+
+def Get_ActualTemperature():
+    return ActualTemp
