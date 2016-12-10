@@ -1,0 +1,6 @@
+import Simulator
+
+Temperature= Simulator.Get_Temperature()
+
+def Get_Temperature():
+    return Temperature
